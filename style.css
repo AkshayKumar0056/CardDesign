@@ -1,0 +1,124 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#f7ff00,#db36a4);
+    background-attachment: fixed;
+}
+
+.container
+{
+    position: relative;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.container .card
+{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 20px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+.container .card .circle
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    clip-path: circle(200px at center 0);
+}
+
+.container .card .circle h1
+{
+    text-align: center;
+    font-size: 5rem;
+}
+
+.container .card .content
+{
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.container .card .content p
+{
+    color: #666;
+}
+
+.container .card .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+
+.container .card:nth-child(1) .circle,
+.container .card:nth-child(1) .content a
+{
+    background: #ffaf00;
+}
+
+.container .card:nth-child(2) .circle,
+.container .card:nth-child(2) .content a
+{
+    background: #db36a4;
+}
+
+.container .card:nth-child(3) .circle,
+.container .card:nth-child(3) .content a
+{
+    background: #bb02ff;
+}
+
+.container:hover .card
+{
+    filter: blur(20px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.container .card:hover
+{
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+img
+{
+    width: 100%;
+}
+
+@media screen and (max-width:370px) {
+    .container{
+        width: 100%;
+    }
+}
